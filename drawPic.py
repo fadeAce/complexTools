@@ -9,3 +9,4 @@ draw = ImageDraw.Draw(im)
 ttfront = ImageFont.truetype('simsun.ttc', 64)
 draw.text("4")
 im.save(outfile)
+cao nima de gui tian da sha bi 
