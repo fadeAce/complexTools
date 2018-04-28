@@ -1,12 +1,13 @@
 #coding = utf-8
-import urllib
-import re
+# -*- coding: utf-8 -*-
+# import requests
+# url = 'https://github.com/ltfedware/complexTools'
+# content = requests.get(url).content
+# print content
 
-def getHtml(html):
-    page = urllib.urlopen(html)
-    html = page.read()
-    return html
-
-html = getHtml("http://club.qingdaonews.com/showAnnounce_27_3979506_1_0.htm")
-
-print getHtml(html)
+import urllib2
+from bs4 import BeautifulSoup
+url="https://github.com/ltfedware/complexTools"
+content=urllib2.urlopen(url)
+soup=BeautifulSoup(content)
+print soup
