@@ -8,7 +8,7 @@ def buttonCallBack(event):
         label['text']="0"
         return
     if num in "=":
-        label['text']=str(eval(label['text']))
+        label['text']=str(eval(label['text']))#eval() 函数用来执行一个字符串表达式，并返回表达式的值
         reset=True
         return
     s=label['text']
@@ -37,6 +37,6 @@ for i in range(2):
     b.grid(row=6,column=2+i)
     b.bind("<Button-1>",buttonCallBack)
 b=Button(root,text="=")
-b.grid(row=6,columnspan=2,sticky="we")
-b.bind("<Button-1>",buttonCallBack)
+b.grid(row=6,columnspan=2,sticky="we")#对齐反向
+b.bind("<Button-1>",buttonCallBack)#绑定事件
 root.mainloop()
